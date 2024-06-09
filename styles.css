@@ -1,0 +1,176 @@
+/* Temel stil ayarları */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  background: #f8f9fa;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  color: #333;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Hero */
+.hero {
+  background: #f0f0f0;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.hero h2 {
+  margin: 0;
+  color: #000000;
+}
+
+.hero p {
+  color: #000000;
+}
+
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Footer */
+footer {
+  background: #908888;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Restoran kartlarını büyütmek için */
+.restaurant-card {
+  width: 30%; /* Kart genişliği */
+  margin: 20px; /* Kartlar arası boşluk */
+  text-align: center; /* Kart içeriğini merkezlemek için */
+  transition: transform 0.3s ease; /* Geçiş efekti */
+}
+
+.restaurant-card img {
+  width: 100%; /* Resmin kart içinde tam genişlikte olması için */
+  height: 200px; /* Sabit yükseklik */
+  object-fit: cover; /* Resmi kartın boyutuna sığdırırken oranlarını korur */
+  border-radius: 8px; /* Kenarlara yuvarlatma */
+}
+
+/* Kartlara büyüme efekti */
+.restaurant-card:hover {
+  transform: scale(1.1); /* Kartı büyüt */
+}
+
+/* Kartları sayfa içinde ortalamak için */
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px; /* Restoran kartları ile restoranlar yazısı arasında boşluk bırakmak için */
+}
+
+/* Restoranlar yazısını ortalamak için */
+.restaurants-heading {
+  text-align: center;
+}
+i {
+  font-size: 17px;
+  color: #000000;
+}
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+/* Modal stilleri */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}

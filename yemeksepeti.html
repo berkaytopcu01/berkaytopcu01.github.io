@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GömGöm</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 onclick="redirectToPage()">GömGöm</h1>
+        <nav>
+          <ul>
+            <li onclick="redirectToPage()"><a href="#">Anasayfa</a></li>
+            <li onclick="redirectToPage()"><a href="#">Restoranlar</a></li>
+            <li><a href="#" onclick="toggleRegistrationForm()">Hesabım</a></li>
+            <li><a href="#" onclick="toggleLoginForm()">Giriş Yap</a></li>
+            <li>
+              <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Kayıt ol formunu gizliyoruz -->
+    <div id="registrationForm" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close" onclick="toggleRegistrationForm()">&times;</span>
+        <h2>Kayıt Ol</h2>
+        <form onsubmit="return register()">
+          <input type="text" id="fullName" placeholder="Ad Soyad" required />
+          <input
+            type="email"
+            id="registerEmail"
+            placeholder="E-posta"
+            required
+          />
+          <input
+            type="password"
+            id="registerPassword"
+            placeholder="Şifre"
+            required
+          />
+          <button type="submit">Kayıt Ol</button>
+        </form>
+        <div
+          id="registrationMessage"
+          class="message"
+          style="display: none"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Giriş yap formunu gizliyoruz -->
+    <div id="loginForm" class="modal" style="display: none">
+      <div class="modal-content">
+        <span class="close" onclick="toggleLoginForm()">&times;</span>
+        <h2>Giriş Yap</h2>
+        <form onsubmit="return login()">
+          <input type="email" id="loginEmail" placeholder="E-posta" required />
+          <input
+            type="password"
+            id="loginPassword"
+            placeholder="Şifre"
+            required
+          />
+          <button type="submit">Giriş Yap</button>
+        </form>
+        <div id="loginMessage" class="message" style="display: none"></div>
+      </div>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h2>Lezzetli yemekler kapınızda!</h2>
+          <p>Restoranlarımızdan seçiminizi yapın, hemen sipariş verin.</p>
+          <a href="#" class="btn">Sipariş Ver</a>
+        </div>
+      </section>
+
+      <section class="restaurants">
+        <div class="container">
+          <h2 class="restaurants-heading">Restoranlar</h2>
+          <div class="restaurant-list">
+            <div class="restaurant-card" onclick="goToPage1()">
+              <img src="./images/starbucks.bg - Kopya.webp" alt="Öncü" />
+              <h3>Starbucks</h3>
+            </div>
+            <div class="restaurant-card" onclick="goToPage2()">
+              <img
+                src="./images/kaburgacıyasar.bg - Kopya.jpg"
+                alt="Kümeschi"
+              />
+              <h3>Kaburgacı Yaşar</h3>
+            </div>
+            <div class="restaurant-card">
+              <img src="./images/öncü.bg - Kopya.jpg" alt="Gagala" />
+              <h3>Öncü</h3>
+            </div>
+            <div class="restaurant-card">
+              <img src="images/restaurant_d.jpg" alt="Köşem" />
+              <h3>Köşem</h3>
+            </div>
+            <div class="restaurant-card">
+              <img src="images/restaurant_e.jpg" alt="Avrupa Döner" />
+              <h3>Avrupa Döner</h3>
+            </div>
+            <div class="restaurant-card">
+              <img src="images/restaurant_f.jpg" alt="Antiochia Döner" />
+              <h3>Antiochia Döner</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div id="accountInfo"></div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 GömGöm</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
